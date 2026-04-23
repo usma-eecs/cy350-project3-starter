@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.zip
+*.egg-info/
+dist/
+build/
+*.egg
+*.log
+*.bak
+*.tmp
+*.swp

@@ -1,0 +1,9 @@
+[project]
+name = "go-back-n-sender"
+version = "0.1.0"
+description = "Go-Back-N Sender"
+requires-python = ">=3.14"
+dependencies = []
+
+[tool.autopep8]
+max_line_length = 120
