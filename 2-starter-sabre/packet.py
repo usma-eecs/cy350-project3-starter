@@ -91,3 +91,6 @@ class SabrePacket:
             payload = payload[:length]
 
         return SabrePacket(flags, seq, ack, cadet_id, payload)
+
+    def __str__(self):
+        return f"SabrePacket(flags={self.flags:#04x}, seq={self.seq}, ack={self.ack}, length={self.length})"
