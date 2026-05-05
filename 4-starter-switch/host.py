@@ -33,7 +33,7 @@ class Host:
                 os.write(fd, frame.encode())
             finally:
                 os.close(fd)
-        except OSError, IOError:
+        except (OSError, IOError):
             pass
 
     def receive(self) -> Optional[bytes]:
@@ -43,7 +43,7 @@ class Host:
         try:
             data = os.read(self._read_fd, 65535)
             return data if data else None
-        except OSError, IOError:
+        except (OSError, IOError):
             return None
 
     def close(self) -> None:
@@ -71,5 +71,5 @@ class Host:
                 frame = Frame.decode(data) if data else None
                 if data:
                     print(f"[{self.name}] received: {frame}")
-            except OSError, IOError:
+            except (OSError, IOError):
                 pass

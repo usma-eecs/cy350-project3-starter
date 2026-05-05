@@ -76,7 +76,7 @@ class Switch:
                 )
             finally:
                 os.close(fd)
-        except OSError, IOError:
+        except (OSError, IOError):
             pass
 
     def run(

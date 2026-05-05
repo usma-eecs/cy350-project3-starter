@@ -1,7 +1,7 @@
 """Shared Ethernet-like frame helpers used by hosts and switches."""
 
 import struct
-from typing import Dict, Optional
+from typing import Self
 
 
 HEADER_FORMAT = "!6s6sH"
@@ -46,7 +46,7 @@ class Frame:
             + self.payload
         )
 
-    def decode(frame: bytes) -> Frame | None:
+    def decode(frame: bytes) -> Self | None:
         """Parse destination/source MAC and ethertype from a raw frame.
 
         Returns None when the frame is too short.
